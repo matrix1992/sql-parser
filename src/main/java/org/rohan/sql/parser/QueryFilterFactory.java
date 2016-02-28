@@ -20,7 +20,7 @@ public class QueryFilterFactory {
                         .filter(dataMap -> {
                             String[] queryParams = query.split(" ");
                             return dataMap.get(queryParams[0]).compareTo(
-                                    queryParams[1]) == 1;
+                                    queryParams[2]) == 1;
                         }).collect(toList());
             };
         case '<':
@@ -30,7 +30,7 @@ public class QueryFilterFactory {
                         .filter(dataMap -> {
                             String[] queryParams = query.split(" ");
                             return dataMap.get(queryParams[0]).compareTo(
-                                    queryParams[1]) == -1;
+                                    queryParams[2]) == -1;
                         }).collect(toList());
             };
         case '=':
@@ -40,7 +40,7 @@ public class QueryFilterFactory {
                         .filter(dataMap -> {
                             String[] queryParams = query.split(" ");
                             return dataMap.get(queryParams[0]).compareTo(
-                                    queryParams[1]) == 0;
+                                    queryParams[2]) == 0;
                         }).collect(toList());
             };
         default:
